@@ -88,6 +88,8 @@ GEM
     erubi (1.11.0)
     erubis (2.7.0)
     execjs (2.8.1)
+    faker (2.23.0)
+      i18n (>= 1.8.11, < 2)
     ffi (1.15.5)
     ffi (1.15.5-java)
     ffi (1.15.5-x64-mingw32)
@@ -279,6 +281,7 @@ DEPENDENCIES
   bootstrap (~> 4.4.1)
   byebug
   capybara (>= 3.26)
+  faker
   font-awesome-sass (~> 6.2.0)
   haml-rails (~> 2.0)
   html2haml
