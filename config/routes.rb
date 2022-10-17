@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :courses
   root 'static_page#index'
   get '/static_page/index', to: 'static_page#index', as: :index
