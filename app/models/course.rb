@@ -1,6 +1,6 @@
 class Course < ApplicationRecord
   include ActionText::Attachable
-  validates :title,  presence: true
+  validates :title, :short_description, :language, :price, :level,  presence: true
   validates :description, presence: true, length: { :minimum => 5 }
   belongs_to :user
 
