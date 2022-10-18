@@ -1,4 +1,3 @@
-
 class Course < ApplicationRecord
   include ActionText::Attachable
   validates :title,  presence: true
@@ -10,4 +9,6 @@ class Course < ApplicationRecord
   end
 
   has_rich_text :description
+  extend FriendlyId
+  friendly_id :title, use: :slugged
 end
