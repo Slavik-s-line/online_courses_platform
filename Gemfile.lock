@@ -225,6 +225,7 @@ GEM
       actionpack (>= 5.0)
       railties (>= 5.0)
     rexml (3.2.5)
+    rolify (6.0.0)
     ruby_parser (3.19.1)
       sexp_processor (~> 4.16)
     rubyzip (2.3.2)
@@ -321,6 +322,7 @@ DEPENDENCIES
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.0)
   ransack
+  rolify
   sass-rails (>= 6)
   selenium-webdriver
   simple_form

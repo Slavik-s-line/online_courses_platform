@@ -5,6 +5,9 @@
       = @users.count
 %p
 
+.card-columns
+  - @users.each do |user|
+    = render 'users/user', user: user
 
 .form-inline
   = search_form_for @q do |f|
