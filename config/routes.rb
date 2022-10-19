@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :courses
-  resources :users, only: [:index]
+  resources :users, only: [:index, :edit, :show, :update]
   root 'static_page#index'
   get '/static_page/index', to: 'static_page#index', as: :index
   get 'static_page/activity'
