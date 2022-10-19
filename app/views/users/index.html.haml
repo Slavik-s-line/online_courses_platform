@@ -1,6 +1,9 @@
-.card-columns
-  - @users.each do |user|
-    = render 'users/user', user: user
+%h3
+  .text-center
+    Users
+    .badge.badge-info
+      = @users.count
+%p
 
 
 .form-inline
