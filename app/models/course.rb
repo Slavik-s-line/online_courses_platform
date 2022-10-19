@@ -1,5 +1,9 @@
 class Course < ApplicationRecord
   include ActionText::Attachable
+  include PublicActivity::Model
+
+  tracked owner: Proc.new{ |controller, model| controller.current_user }
+
   validates :title, :short_description, :language, :price, :level,  presence: true
   validates :description, presence: true, length: { :minimum => 5 }
   belongs_to :user
