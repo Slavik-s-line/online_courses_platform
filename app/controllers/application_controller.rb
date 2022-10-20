@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   include PublicActivity::StoreController
-  include Pundit
+  include Pundit::Authorization
   protect_from_forgery
   before_action :set_global_variables, if: :user_signed_in?
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
