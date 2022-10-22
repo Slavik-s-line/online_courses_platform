@@ -1,0 +1,74 @@
+FORMAT: 1A
+# API Documentation
+
+# Group Users
+
+## Creation of user [/api/v1/users]
+
++ Attributes (object)
+  + email (optional) - User name
+  + password (optional) - User password
+  + password_confirmation (optional) - User password confirmation
+
+### Add a car [POST]
+
++ Request Creating a car (application/json)
+
+    + Headers
+
+            Accept: application/json
+
+    + Body
+
+            {
+              "email": "passat@gamil.com",
+              "password": 111111,
+              "password_confirmation": 111111,
+              "user": {
+                "email": "passat@gamil.com",
+                "password": 111111,
+                "password_confirmation": 111111
+              }
+            }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            
+
+    + Body
+
+            {
+              "id": 31,
+              "email": "passat@gamil.com"
+            }
+
+## Users Collection [/api/v1/users]
+
+### Returns all users [GET]
+
++ Request Get a list of all cars ordered DESC by year (application/json)
+
+    + Headers
+
+            Accept: application/json
+
++ Response 200 (application/json)
+
+    + Headers
+
+            
+
+    + Body
+
+            [
+              {
+                "id": 29,
+                "email": "admin7@example.com"
+              },
+              {
+                "id": 30,
+                "email": "admin8@example.com"
+              }
+            ]
